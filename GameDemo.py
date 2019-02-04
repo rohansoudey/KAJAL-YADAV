@@ -1,5 +1,6 @@
 from array import *
-vals=array('u',['1','2','3','4','5','6','7','8','9'])
+vals=[1,2,3,4,5,6,7,8,9]
+
 counter=0
 for i in vals:
     print(i,end=" ")
@@ -9,349 +10,59 @@ for i in vals:
     else:
         counter=counter+1
 # one for X
-pos1=input("Player 1 Enter Position of your choice\n")
-if(pos1=='1'):
-    vals[0]='X'
-    counter=0
-    for i in vals:
-        print(i,end=" ")
-        if(counter==2):
-            print("\n")
-            counter=0
-        else:
-            counter=counter+1
+pos1=int(input("Player 1 Enter Position of your choice\n"))
+for i in vals:
+    if(i==pos1):
+        #print("inside if 1 "+pos1)
+        vals[i-1]='X'
+        counter=0
+        for j in vals:
+            print(j,end=" ")
+            if(counter==2):
+                print("\n")
+                counter=0
+            else:
+                counter=counter+1
+    #else:
+        #print("This position is lock")
 
-elif(pos1=='2'):
-    vals[1]='X'
-    counter=0
-    for i in vals:
-        print(i,end=" ")
-        if(counter==2):
-            print("\n")
-            counter=0
-        else:
-            counter=counter+1
-elif(pos1=='3'):
-    vals[2]='X'
-    counter=0
-    for i in vals:
-        print(i,end=" ")
-        if(counter==2):
-            print("\n")
-            counter=0
-        else:
-            counter=counter+1
-
-elif(pos1=='4'):
-    vals[3]='X'
-    counter=0
-    for i in vals:
-        print(i,end=" ")
-        if(counter==2):
-            print("\n")
-            counter=0
-        else:
-            counter=counter+1
-elif(pos1=='5'):
-    vals[4]='X'
-    counter=0
-    for i in vals:
-        print(i,end=" ")
-        if(counter==2):
-            print("\n")
-            counter=0
-        else:
-            counter=counter+1
-elif(pos1=='6'):
-    vals[5]='X'
-    counter=0
-    for i in vals:
-        print(i,end=" ")
-        if(counter==2):
-            print("\n")
-            counter=0
-        else:
-            counter=counter+1
-elif(pos1=='7'):
-    vals[6]='X'
-    counter=0
-    for i in vals:
-        print(i,end=" ")
-        if(counter==2):
-            print("\n")
-            counter=0
-        else:
-            counter=counter+1
-elif(pos1=='8'):
-    vals[7]='X'
-    counter=0
-    for i in vals:
-        print(i,end=" ")
-        if(counter==2):
-            print("\n")
-            counter=0
-        else:
-            counter=counter+1
-elif(pos1=='9'):
-    vals[8]='X'
-    counter=0
-    for i in vals:
-        print(i,end=" ")
-        if(counter==2):
-            print("\n")
-            counter=0
-        else:
-            counter=counter+1
-else:
-    print("Invalid Input")
 
 #one for O    
-pos1=input("Player 2 Enter Position of your choice\n")
-if(pos1=='1'):
-    if(vals[0]!='X'):
-        vals[0]='O'
+pos1=int(input("Player 2 Enter Position of your choice\n"))
+for i in vals:
+    if(i==pos1 and pos1!='X'):
+        #print("inside if 1 "+pos1)
+        vals[i-1]='O'
         counter=0
-        for i in vals:
-            print(i,end=" ")
+        for j in vals:
+            print(j,end=" ")
             if(counter==2):
                 print("\n")
                 counter=0
             else:
                 counter=counter+1
 
-    else:
-        print("This position is lock")
-    
-    
-elif(pos1=='2'):
-    if(vals[1]!='X'):
-        vals[1]='O'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-    
-elif(pos1=='3'):
-    if(vals[2]!='X'):
-        vals[2]='O'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
 
-elif(pos1=='4'):
-    if(vals[3]!='X'):
-        vals[3]='O'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='5'):
-    if(vals[4]!='X'):
-        vals[4]='O'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='6'):
-    if(vals[5]!='X'):
-        vals[5]='O'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
+    #else:
+        # print("This position is lock")
+    
+    
 
-elif(pos1=='7'):
-    if(vals[6]!='X'):
-        vals[6]='O'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='8'):
-    if(vals[7]!='X'):
-        vals[7]='O'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='9'):
-    if(vals[8]!='X'):
-        vals[8]='O'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
 #two for X
-pos1=input("Player 1 Enter Position of your choice\n")
-if(pos1=='1'):
-    if(vals[0]!='X' and vals[0]!='O'):
-        vals[0]='X'
+pos1=int(input("Player 1 Enter Position of your choice\n"))
+for i in vals:
+    if(i==pos1 and pos1!='O' and pos1!='X
+       '):
+        #print("inside if 1 "+pos1)
+        vals[i-1]='X'
         counter=0
-        for i in vals:
-            print(i,end=" ")
+        for j in vals:
+            print(j,end=" ")
             if(counter==2):
                 print("\n")
                 counter=0
             else:
                 counter=counter+1
-    else:
-        print("This position is lock")
-
-elif(pos1=='2'):
-    if(vals[1]!='X' and vals[1]!='O'):
-        vals[1]='X'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='3'):
-    if(vals[2]!='X' and vals[2]!='O'):
-        vals[2]='X'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-
-elif(pos1=='4'):
-    if(vals[3]!='X' and vals[3]!='O'):
-        vals[3]='X'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='5'):
-    if(vals[4]!='X' and vals[4]!='O'):
-        vals[4]='X'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='6'):
-    if(vals[5]!='X' and vals[5]!='O'):
-        vals[5]='X'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='7'):
-    if(vals[6]!='X' and vals[6]!='O'):
-        vals[6]='X'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='8'):
-    if(vals[7]!='X' and vals[7]!='O'):
-        vals[7]='X'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-elif(pos1=='9'):
-    if(vals[8]!='X' and vals[8]!='O'):
-        vals[0]='X'
-        counter=0
-        for i in vals:
-            print(i,end=" ")
-            if(counter==2):
-                print("\n")
-                counter=0
-            else:
-                counter=counter+1
-    else:
-        print("This position is lock")
-
 #two for O
 pos1=input("Player 2 Enter Position of your choice\n")
 if(pos1=='1'):
@@ -1102,3 +813,4 @@ elif(vals[0]=='O' and vals[1]=='O' and vals[2]=='O' or vals[3]=='O' and vals[4]=
 else:
     print("Match Draw")
    
+

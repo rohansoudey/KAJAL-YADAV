@@ -1,7 +1,6 @@
 from array import *
 vals=[1,2,3,4,5,6,7,8,9]
 counter=0
-
 #player Second
 def secondPlayer():
     counter=0
@@ -74,7 +73,6 @@ def firstPlayer():
                                 counter=counter+1
 
 checkWin=True
-
 while checkWin:
     for i in vals:
         print(i,end=" ")
@@ -83,9 +81,7 @@ while checkWin:
             counter=0
         else:
             counter=counter+1
-
-            
-    # one for X
+# one for X
     while True:
         try:
             pos1=int(input("Player 1 Enter Position of your choice\n"))
@@ -113,9 +109,7 @@ while checkWin:
                                 counter=0
                             else:
                                 counter=counter+1
-
-            
-    #one for O
+#one for O
     secondPlayer()
     #two for X
     firstPlayer()
